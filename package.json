@@ -1,5 +1,5 @@
 {
-  "name": "httpstatuses",
+  "name": "httpcodes",
   "version": "1.0.0",
   "description": "An easy to reference directory of HTTP Status Codes",
   "main": "build.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/citricsquid/httpstatuses.git"
+    "url": "git+https://github.com/jonstodle/httpcodes.git"
   },
-  "author": "Samuel Ryan <sam@samryan.co.uk>",
+  "author": "Jon Grythe Stødle <jon@stodle.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/citricsquid/httpstatuses/issues"
+    "url": "https://github.com/jonstodle/httpcodes/issues"
   },
-  "homepage": "https://github.com/citricsquid/httpstatuses#readme",
+  "homepage": "https://github.com/jonstodle/httpcodes#readme",
   "dependencies": {
     "finalhandler": "^0.4.1",
     "http": "0.0.0",
