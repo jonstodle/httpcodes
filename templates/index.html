@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block contents %}
+<div class="hero introduction">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        {{section.content | safe}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="share">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <a href="https://twitter.com/intent/tweet?hashtags=httpstatuses&text=Helpful%20HTTP%20Status%20Code%20reference%20site&url=https%3A%2F%2Fhttpcod.es&via=jonstodle" class="twitter">
+          &commat; Share on Twitter
+        </a>
+        <a href="https://github.com/jonstodle/httpcodes" class="github">
+          &bigstar; Star on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container codes">
+  <div class="row">
+    <div class="twelve columns">
+      {% set classes = get_taxonomy(kind="class") %}
+      {% for class in classes.items %}
+      {# set section = get_section(path=section_path) #}
+      <ul>
+        <li>
+          <h2>{{class.name | safe}}</h2>
+        </li>
+        {% for page in class.pages %}
+        <li>
+          <a href="{{page.permalink | safe}}">
+            <span>{{page.extra.code}}</span> {{page.title}}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock contents %}

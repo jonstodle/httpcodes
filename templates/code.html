@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>{{page.extra.code}} {{page.title}} &mdash; httpcod.es</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="description" content="HTTP Status Code {{page.extra.code}}">
+{% endblock description %}
+
+{% block contents %}
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>{{ page.taxonomies.class.0 | safe}}</h2>
+  <h1>
+    <span>{{page.extra.code}}</span> {{page.title}}
+  </h1>
+  {{page.content | safe}}
+  {% if page.extra.references %}
+  <h1 class="section">
+    <span>{{page.extra.code}}</span> Code References
+  </h1>
+  {% for reference in page.extra.references %}
+  <p>
+    {{reference.0}} <code>{{reference.1}}</code>
+  </p>
+  {% endfor %}
+  {% endif %}
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+{% endblock contents %}
