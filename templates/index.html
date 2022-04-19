@@ -33,7 +33,7 @@
         <li>
           <h2>{{class.name | safe}}</h2>
         </li>
-        {% for page in class.pages %}
+        {% for page in class.pages | sort(attribute="extra.code") %}
         <li>
           <a href="{{page.permalink | safe}}">
             <span>{{page.extra.code}}</span> {{page.title}}

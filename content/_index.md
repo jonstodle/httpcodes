@@ -1,6 +1,5 @@
 +++
 title = "HTTP Status Codes"
-sort_by = "weight"
 page_template = "code.html"
 +++
 
