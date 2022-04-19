@@ -2,9 +2,9 @@
 
 [httpcod.es][5] is an easy to reference database of HTTP Status Codes with their definitions and helpful code references, each code is at `httpstatuses.com/code`. All standard codes are included, as are some non-standard codes that have significant presence in the wild.
 
-## Contributing
+This is a for of [rmaake1/httpstatuses][6], after `httpstatuses.com` went offline.
 
-To build you need nodejs, run `npm install` to pull in dependencies and then `node build`, a preview will be available at [localhost:4887][6].
+## Contributing
 
 All contributions are welcome! If you have an idea to improve the website please submit a pull request or [create an issue][1], or provide your thoughts on [open issues][1].
 
@@ -18,10 +18,19 @@ Each status code lives in a Markdown file at [contents/codes](contents/codes), t
 * [Don't double-space after a period][4], and remove any examples of it
 * If the description references a section in the current RFC, always add the RFC identifier. For example "Section 6.6" should become "RFC1234 Section 6.6"
 
+### Running locally
+
+To build and run you'll need Zola. You can [get Zola from the official website][7].
+
+To run the site locally, and have it live update when changes are made to files run `zola serve`.
+
+To generate the static files, and have them output to the directory `public`, run `zola build`.
+
 
 [1]: <https://github.com/jonstodle/httpcodes/issues>
 [2]: <https://daringfireball.net/projects/markdown/syntax#link>
 [3]: <http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml>
 [4]: <http://www.slate.com/articles/technology/technology/2011/01/space_invaders.html>
 [5]: <https://httpcod.es>
-[6]: <http://localhost:4887>
+[6]: <https://github.com/rmaake1/httpstatuses>
+[7]: <https://www.getzola.org/documentation/getting-started/installation/>
