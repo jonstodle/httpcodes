@@ -3,17 +3,17 @@ $container-width: 528px;
 @import "skeleton/skeleton";
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Atkinson Hyperlegible';
   font-weight: 400;
   font-style: normal;
-  src: url('open-sans-regular.woff') format('woff');
+  src: url('Atkinson-Hyperlegible-Regular-102.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Source Code Pro';
   font-weight: 700;
   font-style: normal;
-  src: url('source-code-pro-700.woff') format('woff');
+  src: url('JetBrains-Mono-Bold.woff2') format('woff2');
 }
 
 .container {
@@ -29,7 +29,7 @@ $container-width: 528px;
 
 body {
   color: #556270;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
   font-weight: normal;
   margin: 0px;
 }
@@ -109,14 +109,14 @@ code {
   margin-bottom: 40px;
 
   ul {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     font-size: 14px;
     letter-spacing: 0.5px;
     list-style-type: none;
     margin-bottom: 10px;
 
     h2 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 6px;
