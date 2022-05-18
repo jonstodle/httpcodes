@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>103 Early Hints &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 103">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>1&times;&times; Informational</h2>
+  <h1>
+    <span>103</span> Early Hints
+  </h1>
+  <p>The server is likely to send a final response with the header fields included in the informational response.</p>
+<p>Typically, a server will include the header fields sent in a 103 (Early Hints) response in the final response as well.  However, there might be cases when this is not desirable, such as when the server learns that the header fields in the 103 (Early Hints) response are not correct before the final response is sent.</p>
+<p>A client can speculatively evaluate the header fields included in a 103 (Early Hints) response while waiting for the final response.  For example, a client might recognize a Link header field value containing the relation type &quot;preload&quot; and start fetching the target resource.  However, these header fields only provide hints to the client; they do not replace the header fields on the final response.</p>
+<p>Aside from performance optimizations, such evaluation of the 103 (Early Hints) response's header fields MUST NOT affect how the final response is processed.  A client MUST NOT interpret the 103 (Early Hints) response header fields as if they applied to the informational response itself (e.g., as metadata about the 103 (Early Hints) response).</p>
+<p>A server MAY use a 103 (Early Hints) response to indicate only some of the header fields that are expected to be found in the final response.  A client SHOULD NOT interpret the nonexistence of a header field in a 103 (Early Hints) response as a speculation that the header field is unlikely to be part of the final response.</p>
+<hr />
+<ul>
+<li>Source: <a href="https://tools.ietf.org/html/rfc8297#section-2">RFC8297 Section 2</a></li>
+</ul>
+
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

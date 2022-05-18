@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>401 Unauthorized &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 401">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>401</span> Unauthorized
+  </h1>
+  <p>The request has not been applied because it lacks valid authentication credentials for the target resource.</p>
+<p>The server generating a 401 response MUST send a WWW-Authenticate header field<sup><a href="https://httpcod.es/401/#ref-1">1</a></sup> containing at least one challenge applicable to the target resource.</p>
+<p>If the request included authentication credentials, then the 401 response indicates that authorization has been refused for those credentials. The user agent MAY repeat the request with a new or replaced Authorization header field<sup><a href="https://httpcod.es/401/#ref-2">2</a></sup>. If the 401 response contains the same challenge as the prior response, and the user agent has already attempted authentication at least once, then the user agent SHOULD present the enclosed representation to the user, since it usually contains relevant diagnostic information.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> WWW-Authenticate <a href="http://tools.ietf.org/html/rfc7235#section-4.1">RFC7235 Section 4.1</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Authorization <a href="http://tools.ietf.org/html/rfc7235#section-4.2">RFC7235 Section 4.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7235#section-3.1">RFC7235 Section 3.1</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>401</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:unauthorized</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::UNAUTHORIZED</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusUnauthorized</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_UNAUTHORIZED</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.UNAUTHORIZED</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.UNAUTHORIZED</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.UNAUTHORIZED</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.Unauthorized</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

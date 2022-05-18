@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>203 Non-authoritative Information &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 203">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>2&times;&times; Success</h2>
+  <h1>
+    <span>203</span> Non-authoritative Information
+  </h1>
+  <p>The request was successful but the enclosed payload has been modified from that of the origin server's <a href="/200">200 OK</a> response by a transforming proxy<sup><a href="https://httpcod.es/203/#ref-1">1</a></sup>.</p>
+<p>This status code allows the proxy to notify recipients when a transformation has been applied, since that knowledge might impact later decisions regarding the content. For example, future cache validation requests for the content might only be applicable along the same request path (through the same proxies).</p>
+<p>The 203 response is similar to the Warning code of 214 Transformation Applied<sup><a href="https://httpcod.es/203/#ref-2">2</a></sup>, which has the advantage of being applicable to responses with any status code.</p>
+<p>A 203 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/203/#ref-3">3</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Transformations
+<a href="http://tools.ietf.org/html/rfc7230#section-5.7.2">RFC7230 Section 5.7.2</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Warning <a href="http://tools.ietf.org/html/rfc7234#section-5.5">RFC7234 Section 5.5</a></span></li>
+<li><span id="ref-3"><sup>3</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.3.4">RFC7231 Section 6.3.4</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>203</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:non_authoritative_information</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::NON_AUTHORITATIVE_INFORMATION</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusNonAuthoritativeInfo</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_NON_AUTHORITATIVE_INFORMATION</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.NON_AUTHORITATIVE_INFORMATION</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.NON_AUTHORITATIVE_INFORMATION</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.NON_AUTHORITATIVE_INFORMATION</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.NonAuthoritativeInformation</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>301 Moved Permanently &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 301">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>3&times;&times; Redirection</h2>
+  <h1>
+    <span>301</span> Moved Permanently
+  </h1>
+  <p>The target resource has been assigned a new permanent URI and any future references to this resource ought to use one of the enclosed URIs.</p>
+<p>Clients with link-editing capabilities ought to automatically re-link references to the effective request URI to one or more of the new references sent by the server, where possible.</p>
+<p>The server SHOULD generate a Location header field in the response containing a preferred URI reference for the new permanent URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the new URI(s).</p>
+<p>Note: For historical reasons, a user agent MAY change the request method from POST to GET for the subsequent request. If this behavior is undesired, the <a href="/307">307 Temporary Redirect</a> status code can be used instead.</p>
+<p>A 301 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/301/#ref-1">1</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.4.2">RFC7231 Section 6.4.2</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>301</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:moved_permanently</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::MOVED_PERMANENTLY</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusMovedPermanently</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_MOVED_PERMANENTLY</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.MOVED_PERMANENTLY</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.MOVED_PERMANENTLY</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.MOVED_PERMANENTLY</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.MovedPermanently</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

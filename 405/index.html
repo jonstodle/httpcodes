@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>405 Method Not Allowed &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 405">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>405</span> Method Not Allowed
+  </h1>
+  <p>The method received in the request-line is known by the origin server but not supported by the target resource.</p>
+<p>The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods.</p>
+<p>A 405 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/405/#ref-1">1</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.5">RFC7231 Section 6.5.5</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>405</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:method_not_allowed</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::METHOD_NOT_ALLOWED</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusMethodNotAllowed</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_METHOD_NOT_ALLOWED</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.METHOD_NOT_ALLOWED</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.METHOD_NOT_ALLOWED</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.METHOD_NOT_ALLOWED</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.MethodNotAllowed</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

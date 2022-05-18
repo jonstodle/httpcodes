@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>300 Multiple Choices &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 300">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>3&times;&times; Redirection</h2>
+  <h1>
+    <span>300</span> Multiple Choices
+  </h1>
+  <p>The target resource has more than one representation, each with its own more specific identifier, and information about the alternatives is being provided so that the user (or user agent) can select a preferred representation by redirecting its request to one or more of those identifiers.</p>
+<p>In other words, the server desires that the user agent engage in reactive negotiation to select the most appropriate representation(s) for its needs<sup><a href="https://httpcod.es/300/#ref-1">1</a></sup>.</p>
+<p>If the server has a preferred choice, the server SHOULD generate a Location header field containing a preferred choice's URI reference. The user agent MAY use the Location field value for automatic redirection.</p>
+<p>For request methods other than HEAD, the server SHOULD generate a payload in the 300 response containing a list of representation metadata and URI reference(s) from which the user or user agent can choose the one most preferred. The user agent MAY make a selection from that list automatically if it understands the provided media type. A specific format for automatic selection is not defined by this specification because HTTP tries to remain orthogonal to the definition of its payloads. In practice, the representation is provided in some easily parsed format believed to be acceptable to the user agent, as determined by shared design or content negotiation, or in some commonly accepted hypertext format.</p>
+<p>A 300 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/300/#ref-2">2</a></sup>.</p>
+<p>Note: The original proposal for the 300 status code defined the URI header field as providing a list of alternative representations, such that it would be usable for 200, 300, and 406 responses and be transferred in responses to the HEAD method. However, lack of deployment and disagreement over syntax led to both URI and Alternates (a subsequent proposal) being dropped from this specification. It is possible to communicate the list using a set of Link header fields<sup><a href="https://httpcod.es/300/#ref-3">3</a></sup>, each with a relationship of &quot;alternate&quot;, though deployment is a chicken-and-egg problem.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Content Negotiation
+<a href="http://tools.ietf.org/html/rfc7231#section-3.4">RFC7231 Section 3.4</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li><span id="ref-3"><sup>3</sup> Web Linking <a href="http://tools.ietf.org/html/rfc5988">RFC5988</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.4.1">RFC7231 Section 6.4.1</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>300</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:multiple_choices</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::MULTIPLE_CHOICES</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusMultipleChoices</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_MULTIPLE_CHOICES</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.MULTIPLE_CHOICES</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.MULTIPLE_CHOICES</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.MULTIPLE_CHOICES</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.MultipleChoices</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>413 Payload Too Large &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 413">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>413</span> Payload Too Large
+  </h1>
+  <p>The server is refusing to process a request because the request payload is larger than the server is willing or able to process.</p>
+<p>The server MAY close the connection to prevent the client from continuing the request.</p>
+<p>If the condition is temporary, the server SHOULD generate a Retry-After header field to indicate that it is temporary and after what time the client MAY try again.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.11">RFC7231 Section 6.5.11</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>413</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:request_entity_too_large</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::PAYLOAD_TOO_LARGE</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusRequestEntityTooLarge</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_REQUEST_ENTITY_TOO_LARGE</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.REQUEST_ENTITY_TOO_LARGE</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.REQUEST_ENTITY_TOO_LARGE</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.REQUEST_ENTITY_TOO_LARGE</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.RequestEntityTooLarge</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

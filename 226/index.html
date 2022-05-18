@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>226 IM Used &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 226">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>2&times;&times; Success</h2>
+  <h1>
+    <span>226</span> IM Used
+  </h1>
+  <p>The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.</p>
+<p>The actual current instance might not be available except by combining this response with other previous or future responses, as appropriate for the specific instance-manipulation(s). If so, the headers of the resulting instance are the result of combining the headers from the 226 response and the other instances, following the rules in <a href="http://tools.ietf.org/html/rfc2616#section-13.5.3">section 13.5.3</a> of the HTTP/1.1 specification.</p>
+<p>The request MUST have included an A-IM header field listing at least one instance-manipulation. The response MUST include an Etag header field giving the entity tag of the current instance.</p>
+<p>A response received with a status code of 226 MAY be stored by a cache and used in reply to a subsequent request, subject to the HTTP expiration mechanism and any Cache-Control headers, and to the requirements in <a href="http://tools.ietf.org/html/rfc3229#section-10.6">section 10.6</a>.</p>
+<p>A response received with a status code of 226 MAY be used by a cache, in conjunction with a cache entry for the base instance, to create a cache entry for the current instance.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc3229#section-10.4.1">RFC3229 Section 10.4.1</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>226</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:im_used</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::IM_USED</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_IM_USED</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

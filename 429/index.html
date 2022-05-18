@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>429 Too Many Requests &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 429">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>429</span> Too Many Requests
+  </h1>
+  <p>The user has sent too many requests in a given amount of time (&quot;rate limiting&quot;).</p>
+<p>The response representations SHOULD include details explaining the condition, and MAY include a Retry-After header indicating how long to wait before making a new request.</p>
+<p>For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 429 Too Many Requests
+</span><span>Content-Type: text/html
+</span><span>Retry-After: 3600
+</span><span>
+</span><span>&lt;html&gt;
+</span><span>  &lt;head&gt;
+</span><span>    &lt;title&gt;Too Many Requests&lt;/title&gt;
+</span><span>  &lt;/head&gt;
+</span><span>  &lt;body&gt;
+</span><span>    &lt;h1&gt;Too Many Requests&lt;/h1&gt;
+</span><span>    &lt;p&gt;I only allow 50 requests per hour to this Web site per
+</span><span>    logged in user. Try again soon.&lt;/p&gt;
+</span><span>  &lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<p>Note that this specification does not define how the origin server identifies the user, nor how it counts requests. For example, an origin server that is limiting request rates can do so based upon counts of requests on a per-resource basis, across the entire server, or even among a set of servers. Likewise, it might identify the user by its authentication credentials, or a stateful cookie.</p>
+<p>Responses with the 429 status code MUST NOT be stored by a cache.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc6585#section-4">RFC6585 Section 4</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>429</span> Code References
+  </h1>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::TOO_MANY_REQUESTS</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_TOO_MANY_REQUESTS</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

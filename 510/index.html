@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>510 Not Extended &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 510">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>5&times;&times; Server Error</h2>
+  <h1>
+    <span>510</span> Not Extended
+  </h1>
+  <p>The policy for accessing the resource has not been met in the request. The server should send back all the information necessary for the client to issue an extended request.</p>
+<p>It is outside the scope of this specification to specify how the extensions inform the client.</p>
+<p>If the 510 response contains information about extensions that were not present in the initial request then the client MAY repeat the request if it has reason to believe it can fulfill the extension policy by modifying the request according to the information provided in the 510 response. Otherwise the client MAY present any entity included in the 510 response to the user, since that entity may include relevant diagnostic information.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc2774#section-7">RFC2774 Section 7</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>510</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:not_extended</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::NOT_EXTENDED</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_NOT_EXTENDED</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

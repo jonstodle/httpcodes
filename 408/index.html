@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>408 Request Timeout &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 408">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>408</span> Request Timeout
+  </h1>
+  <p>The server did not receive a complete request message within the time that it was prepared to wait.</p>
+<p>A server SHOULD send the &quot;close&quot; connection option<sup><a href="https://httpcod.es/408/#ref-1">1</a></sup> in the response, since 408 implies that the server has decided to close the connection rather than continue waiting. If the client has an outstanding request in transit, the client MAY repeat that request on a new connection.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Connection <a href="http://tools.ietf.org/html/rfc7230#section-6.1">RFC7230 Section 6.1</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.7">RFC7231 Section 6.5.7</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>408</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:request_timeout</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::REQUEST_TIMEOUT</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusRequestTimeout</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_REQUEST_TIMEOUT</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.REQUEST_TIMEOUT</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.REQUEST_TIMEOUT</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.REQUEST_TIMEOUT</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.RequestTimeout</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

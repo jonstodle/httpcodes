@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>426 Upgrade Required &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 426">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>426</span> Upgrade Required
+  </h1>
+  <p>The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.</p>
+<p>The server MUST send an Upgrade header field in a 426 response to indicate the required protocol(s)<sup><a href="https://httpcod.es/426/#ref-1">1</a></sup></p>
+<p>Example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 426 Upgrade Required
+</span><span>Upgrade: HTTP/3.0
+</span><span>Connection: Upgrade
+</span><span>Content-Length: 53
+</span><span>Content-Type: text/plain
+</span><span>
+</span><span>This service requires use of the HTTP/3.0 protocol.
+</span></code></pre>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Upgrade <a href="http://tools.ietf.org/html/rfc7230#section-6.7">RFC7230 Section 6.7</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.15">RFC7231 Section 6.5.15</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>426</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:upgrade_required</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::UPGRADE_REQUIRED</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_UPGRADE_REQUIRED</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.UpgradeRequired</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

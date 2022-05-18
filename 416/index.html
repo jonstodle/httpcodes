@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>416 Requested Range Not Satisfiable &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 416">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>416</span> Requested Range Not Satisfiable
+  </h1>
+  <p>None of the ranges in the request's Range header field<sup><a href="https://httpcod.es/416/#ref-1">1</a></sup> overlap the current extent of the selected resource or that the set of ranges requested has been rejected due to invalid ranges or an excessive request of small or overlapping ranges.</p>
+<p>For byte ranges, failing to overlap the current extent means that the first-byte-pos of all of the byte-range-spec values were greater than the current length of the selected representation. When this status code is generated in response to a byte-range request, the sender SHOULD generate a Content-Range header field specifying the current length of the selected representation<sup><a href="https://httpcod.es/416/#ref-2">2</a></sup>.</p>
+<p>For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 416 Range Not Satisfiable
+</span><span>Date: Fri, 20 Jan 2012 15:41:54 GMT
+</span><span>Content-Range: bytes */47022
+</span></code></pre>
+<p>Note: Because servers are free to ignore Range, many implementations will simply respond with the entire selected representation in a <a href="/200">200 OK</a> response. That is partly because most clients are prepared to receive a <a href="/200">200 OK</a> to complete the task (albeit less efficiently) and partly because clients might not stop making an invalid partial request until they have received a complete representation. Thus, clients cannot depend on receiving a 416 Range Not Satisfiable response even when it is most appropriate.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Range <a href="http://tools.ietf.org/html/rfc7233#section-3.1">RFC7233 Section 3.1</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Content-Range <a href="http://tools.ietf.org/html/rfc7233#section-4.2">RFC7233 Section 4.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7233#section-4.4">RFC7233 Section 4.4</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>416</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:requested_range_not_satisfiable</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::RANGE_NOT_SATISFIABLE</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusRequestedRangeNotSatisfiable</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_REQUESTED_RANGE_NOT_SATISFIABLE</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.REQUESTED_RANGE_NOT_SATISFIABLE</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.REQUESTED_RANGE_NOT_SATISFIABLE</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.REQUESTED_RANGE_NOT_SATISFIABLE</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.RequestedRangeNotSatisfiable</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

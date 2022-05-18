@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>303 See Other &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 303">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>3&times;&times; Redirection</h2>
+  <h1>
+    <span>303</span> See Other
+  </h1>
+  <p>The server is redirecting the user agent to a different resource, as indicated by a URI in the Location header field, which is intended to provide an indirect response to the original request.</p>
+<p>A user agent can perform a retrieval request targeting that URI (a GET or HEAD request if using HTTP), which might also be redirected, and present the eventual result as an answer to the original request. Note that the new URI in the Location header field is not considered equivalent to the effective request URI.</p>
+<p>This status code is applicable to any HTTP method. It is primarily used to allow the output of a POST action to redirect the user agent to a selected resource, since doing so provides the information corresponding to the POST response in a form that can be separately identified, bookmarked, and cached, independent of the original request.</p>
+<p>A 303 response to a GET request indicates that the origin server does not have a representation of the target resource that can be transferred by the server over HTTP. However, the Location field value refers to a resource that is descriptive of the target resource, such that making a retrieval request on that other resource might result in a representation that is useful to recipients without implying that it represents the original target resource. Note that answers to the questions of what can be represented, what representations are adequate, and what might be a useful description are outside the scope of HTTP.</p>
+<p>Except for responses to a HEAD request, the representation of a 303 response ought to contain a short hypertext note with a hyperlink to the same URI reference provided in the Location header field.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.4.4">RFC7321 Section 6.4.4</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>303</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:see_other</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::SEE_OTHER</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusSeeOther</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_SEE_OTHER</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.SEE_OTHER</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.SEE_OTHER</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.SEE_OTHER</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.SeeOther</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>428 Precondition Required &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 428">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>428</span> Precondition Required
+  </h1>
+  <p>The origin server requires the request to be conditional.</p>
+<p>Its typical use is to avoid the &quot;lost update&quot; problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict. By requiring requests to be conditional, the server can assure that clients are working with the correct copies.</p>
+<p>Responses using this status code SHOULD explain how to resubmit the request successfully. For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 428 Precondition Required
+</span><span>Content-Type: text/html
+</span><span>
+</span><span>&lt;html&gt;
+</span><span>  &lt;head&gt;
+</span><span>    &lt;title&gt;Precondition Required&lt;/title&gt;
+</span><span>  &lt;/head&gt;
+</span><span>  &lt;body&gt;
+</span><span>    &lt;h1&gt;Precondition Required&lt;/h1&gt;
+</span><span>    &lt;p&gt;This request is required to be conditional; try using &quot;If-Match&quot;.&lt;/p&gt;
+</span><span>  &lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<p>Responses with the 428 status code MUST NOT be stored by a cache.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc6585#section-3">RFC6585 Section 3</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>428</span> Code References
+  </h1>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::PRECONDITION_REQUIRED</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_PRECONDITION_REQUIRED</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

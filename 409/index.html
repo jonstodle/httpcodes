@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>409 Conflict &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 409">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>409</span> Conflict
+  </h1>
+  <p>The request could not be completed due to a conflict with the current state of the target resource. This code is used in situations where the user might be able to resolve the conflict and resubmit the request.</p>
+<p>The server SHOULD generate a payload that includes enough information for a user to recognize the source of the conflict.</p>
+<p>Conflicts are most likely to occur in response to a PUT request. For example, if versioning were being used and the representation being PUT included changes to a resource that conflict with those made by an earlier (third-party) request, the origin server might use a 409 response to indicate that it can't complete the request. In this case, the response representation would likely contain information useful for merging the differences based on the revision history.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.8">RFC7231 Section 6.5.8</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>409</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:conflict</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::CONFLICT</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusConflict</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_CONFLICT</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.CONFLICT</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.CONFLICT</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.CONFLICT</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.Conflict</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

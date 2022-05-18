@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>202 Accepted &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 202">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>2&times;&times; Success</h2>
+  <h1>
+    <span>202</span> Accepted
+  </h1>
+  <p>The request has been accepted for processing, but the processing has not been
+completed. The request might or might not eventually be acted upon, as it might
+be disallowed when processing actually takes place.</p>
+<p>There is no facility in HTTP for re-sending a status code from an asynchronous
+operation.</p>
+<p>The 202 response is intentionally noncommittal. Its purpose is to allow a server to accept a request for some other process (perhaps a batch-oriented process that is only run once per day) without requiring that the user agent's connection to the server persist until the process is completed. The representation sent with this response ought to describe the request's current status and point to (or embed) a status monitor that can provide the user with an estimate of when the request will be fulfilled.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.3.3">RFC7231 Section 6.3.3</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>202</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:accepted</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::ACCEPTED</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusAccepted</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_ACCEPTED</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.ACCEPTED</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.ACCEPTED</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.ACCEPTED</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.Accepted</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

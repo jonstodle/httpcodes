@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>404 Not Found &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 404">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>404</span> Not Found
+  </h1>
+  <p>The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p>
+<p>A 404 status code does not indicate whether this lack of representation is temporary or permanent; the <a href="/410">410 Gone</a> status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent.</p>
+<p>A 404 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/404/#ref-1">1</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.4">RFC7231 6.5.4</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>404</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:not_found</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::NOT_FOUND</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusNotFound</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_NOT_FOUND</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.NOT_FOUND</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.NOT_FOUND</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.NOT_FOUND</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.NotFound</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

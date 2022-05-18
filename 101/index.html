@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>101 Switching Protocols &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 101">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>1&times;&times; Informational</h2>
+  <h1>
+    <span>101</span> Switching Protocols
+  </h1>
+  <p>The server understands and is willing to comply with the client's request, via the Upgrade header field<sup><a href="https://httpcod.es/101/#ref-1">1</a></sup>, for a change in the application protocol being used on this connection.</p>
+<p>The server MUST generate an Upgrade header field in the response that indicates which protocol(s) will be switched to immediately after the empty line that terminates the 101 response.</p>
+<p>It is assumed that the server will only agree to switch protocols when it is advantageous to do so. For example, switching to a newer version of HTTP might be advantageous over older versions, and switching to a real-time, synchronous protocol might be advantageous when delivering resources that use such features.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Upgrade <a href="http://tools.ietf.org/html/rfc7230#section-6.7">RFC7230 Section 6.7</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.2.2">RFC7231 Section 6.2.2</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>101</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:switching_protocols</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::SWITCHING_PROTOCOLS</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusSwitchingProtocols</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_SWITCHING_PROTOCOLS</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.SWITCHING_PROTOCOLS</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.SWITCHING_PROTOCOLS</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.SWITCHING_PROTOCOLS</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.SwitchingProtocols</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

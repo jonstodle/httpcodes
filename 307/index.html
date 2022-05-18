@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>307 Temporary Redirect &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 307">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>3&times;&times; Redirection</h2>
+  <h1>
+    <span>307</span> Temporary Redirect
+  </h1>
+  <p>The target resource resides temporarily under a different URI and the user agent MUST NOT change the request method if it performs an automatic redirection to that URI.</p>
+<p>Since the redirection can change over time, the client ought to continue using the original effective request URI for future requests.</p>
+<p>The server SHOULD generate a Location header field in the response containing a URI reference for the different URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the different URI(s).</p>
+<p>Note: This status code is similar to 302 Found, except that it does not allow changing the request method from POST to GET. This specification defines no equivalent counterpart for <a href="/301">301 Moved Permanently</a> (<a href="http://tools.ietf.org/html/rfc7238">RFC7238</a>, however, proposes defining the status code <a href="/308">308 Permanent Redirect</a> for this purpose).</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.4.7">RFC7231 Section 6.4.7</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>307</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:temporary_redirect</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::TEMPORARY_REDIRECT</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusTemporaryRedirect</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_TEMPORARY_REDIRECT</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.TEMPORARY_REDIRECT</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.TEMPORARY_REDIRECT</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.TEMPORARY_REDIRECT</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.TemporaryRedirect</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

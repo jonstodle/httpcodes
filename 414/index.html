@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>414 Request-URI Too Long &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 414">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>414</span> Request-URI Too Long
+  </h1>
+  <p>The server is refusing to service the request because the request-target<sup><a href="https://httpcod.es/414/#ref-1">1</a></sup> is longer than the server is willing to interpret.</p>
+<p>This rare condition is only likely to occur when a client has improperly converted a POST request to a GET request with long query information, when the client has descended into a &quot;black hole&quot; of redirection (e.g., a redirected URI prefix that points to a suffix of itself) or when the server is under attack by a client attempting to exploit potential security holes.</p>
+<p>A 414 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls <sup><a href="https://httpcod.es/414/#ref-2">2</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Content Negotiation
+<a href="http://tools.ietf.org/html/rfc7231#section-5.3">RFC7230 Section 5.3</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Calculating Heuristic Freshness
+RFC7234 Section 4.2.2]<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">3</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.5.12">RFC7231 Section 6.5.12</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>414</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:request_uri_too_long</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::URI_TOO_LONG</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusRequestURITooLong</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_REQUEST_URI_TOO_LONG</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.REQUEST_URI_TOO_LONG</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.REQUEST_URI_TOO_LONG</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.REQUEST_URI_TOO_LONG</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.RequestUriTooLong</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

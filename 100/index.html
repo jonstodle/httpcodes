@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>100 Continue &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 100">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>1&times;&times; Informational</h2>
+  <h1>
+    <span>100</span> Continue
+  </h1>
+  <p>The initial part of a request has been received and has not yet been rejected by the server. The server intends to send a final response after the request has been fully received and acted upon.</p>
+<p>When the request contains an Expect header field that includes a 100-continue expectation, the 100 response indicates that the server wishes to receive the request payload body<sup><a href="https://httpcod.es/100/#ref-1">1</a></sup>. The client ought to continue sending the request and discard the 100 response.</p>
+<p>If the request did not contain an Expect header field containing the 100-continue expectation, the client can simply discard this interim response.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Expect <a href="http://tools.ietf.org/html/rfc7231#section-5.1.1">RFC7231 Section 5.1.1</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.2.1">RFC7231 Section 6.1.1</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>100</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:continue</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::CONTINUE</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusContinue</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_CONTINUE</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.CONTINUE</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.CONTINUE</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.CONTINUE</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.Continue</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

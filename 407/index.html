@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>407 Proxy Authentication Required &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 407">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>407</span> Proxy Authentication Required
+  </h1>
+  <p>Similar to <a href="/401">401 Unauthorized</a>, but it indicates that the client needs to authenticate itself in order to use a proxy.</p>
+<p>The proxy MUST send a Proxy-Authenticate header field<sup><a href="https://httpcod.es/407/#ref-1">1</a></sup> containing a challenge applicable to that proxy for the target resource. The client MAY repeat the request with a new or replaced Proxy-Authorization header field<sup><a href="https://httpcod.es/407/#ref-2">2</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Proxy-Authenticate
+<a href="http://tools.ietf.org/html/rfc7235#section-4.3">RFC7235 Section 4.3</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Proxy-Authorization
+<a href="http://tools.ietf.org/html/rfc7235#section-4.4">RFC7235 Section 4.4</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7235#section-3.2">RFC7235 Section 3.2</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>407</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:proxy_authentication_required</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::PROXY_AUTHENTICATION_REQUIRED</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusProxyAuthRequired</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_PROXY_AUTHENTICATION_REQUIRED</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.PROXY_AUTHENTICATION_REQUIRED</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.PROXY_AUTHENTICATION_REQUIRED</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.PROXY_AUTHENTICATION_REQUIRED</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.ProxyAuthenticationRequired</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

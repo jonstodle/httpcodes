@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>451 Unavailable For Legal Reasons &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 451">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>451</span> Unavailable For Legal Reasons
+  </h1>
+  <p>The server is denying access to the resource as a consequence of a legal demand.</p>
+<p>The server in question might not be an origin server. This type of legal demand typically most directly affects the operations of ISPs and search engines.</p>
+<p>Responses using this status code SHOULD include an explanation, in the response body, of the details of the legal demand: the party making it, the applicable legislation or regulation, and what classes of person and resource it applies to. For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 451 Unavailable For Legal Reasons
+</span><span>Link: &lt;https://spqr.example.org/legislatione&gt;; rel=&quot;blocked-by&quot;
+</span><span>Content-Type: text/html
+</span><span>
+</span><span>&lt;html&gt;
+</span><span>  &lt;head&gt;
+</span><span>    &lt;title&gt;Unavailable For Legal Reasons&lt;/title&gt;
+</span><span>  &lt;/head&gt;
+</span><span>  &lt;body&gt;
+</span><span>    &lt;h1&gt;Unavailable For Legal Reasons&lt;/h1&gt;
+</span><span>    &lt;p&gt;This request may not be serviced in the Roman Province
+</span><span>    of Judea due to the Lex Julia Majestatis, which disallows
+</span><span>    access to resources hosted on servers deemed to be
+</span><span>    operated by the People&#39;s Front of Judea.&lt;/p&gt;
+</span><span>  &lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<p>The use of the 451 status code implies neither the existence nor non- existence of the resource named in the request. That is to say, it is possible that if the legal demands were removed, a request for the resource still might not succeed.</p>
+<p>Note that in many cases clients can still access the denied resource by using technical countermeasures such as a VPN or the Tor network.</p>
+<p>A 451 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls; see <a href="https://tools.ietf.org/html/rfc7234">RFC7234</a>.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7725">RFC 7725</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>451</span> Code References
+  </h1>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::UNAVAILABLE_FOR_LEGAL_REASONS</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_UNAVAILABLE_FOR_LEGAL_REASONS</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

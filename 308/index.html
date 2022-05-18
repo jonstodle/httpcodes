@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>308 Permanent Redirect &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 308">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>3&times;&times; Redirection</h2>
+  <h1>
+    <span>308</span> Permanent Redirect
+  </h1>
+  <p>The target resource has been assigned a new permanent URI and any future references to this resource ought to use one of the enclosed URIs.</p>
+<p>Clients with link editing capabilities ought to automatically re-link references to the effective request URI<sup><a href="https://httpcod.es/308/#ref-1">1</a></sup> to one or more of the new references sent by the server, where possible.</p>
+<p>The server SHOULD generate a Location header field<sup><a href="https://httpcod.es/308/#ref-2">2</a></sup> in the response containing a preferred URI reference for the new permanent URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the new URI(s).</p>
+<p>A 308 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/308/#ref-3">3</a></sup>.</p>
+<p>Note: This status code is similar to <a href="/301">301 Moved Permanently</a>, except that it does not allow changing the request method from POST to GET.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Effective Request URI
+<a href="http://tools.ietf.org/html/rfc7230#section-5.5">RFC7230 Section 5.5</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Location <a href="http://tools.ietf.org/html/rfc7231#section-7.1.2">RFC7231 Section 7.1.2</a></span></li>
+<li><span id="ref-3"><sup>3</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7538#section-3">RFC738 Section 3</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>308</span> Code References
+  </h1>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::PERMANENT_REDIRECT</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_PERMANENTLY_REDIRECT</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

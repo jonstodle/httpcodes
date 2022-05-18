@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>200 OK &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 200">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>2&times;&times; Success</h2>
+  <h1>
+    <span>200</span> OK
+  </h1>
+  <p>The request has succeeded.</p>
+<p>The payload sent in a 200 response depends on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
+<ul>
+<li><code>GET</code> a representation of the target resource</li>
+<li><code>HEAD</code> the same representation as <code>GET</code>, but without the representation data</li>
+<li><code>POST</code> a representation of the status of, or results obtained from, the action;
+<ul>
+<li><code>PUT</code> <code>DELETE</code> a representation of the status of the action;</li>
+<li><code>OPTIONS</code> a representation of the communications options;</li>
+<li><code>TRACE</code> a representation of the request message as received by the end server.</li>
+</ul>
+</li>
+</ul>
+<p>Aside from responses to CONNECT, a 200 response always has a payload, though an origin server MAY generate a payload body of zero length. If no payload is desired, an origin server ought to send <a href="/204">204 No Content</a> instead.  For CONNECT, no payload is allowed because the successful result is a tunnel, which begins immediately after the 200 response header section.</p>
+<p>A 200 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls<sup><a href="https://httpcod.es/200/#ref-1">1</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.3.1">RFC7231 Section 6.3.1</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>200</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:ok</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::OK</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusOK</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_OK</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.OK</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.OK</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.OK</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.OK</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

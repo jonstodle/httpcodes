@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>206 Partial Content &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 206">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>2&times;&times; Success</h2>
+  <h1>
+    <span>206</span> Partial Content
+  </h1>
+  <p>The server is successfully fulfilling a range request for the target resource by transferring one or more parts of the selected representation that correspond to the satisfiable ranges found in the request's Range header field<sup><a href="https://httpcod.es/206/#ref-1">1</a></sup>.</p>
+<p>If a single part is being transferred, the server generating the 206 response MUST generate a Content-Range header field, describing what range of the selected representation is enclosed, and a payload consisting of the range. For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 206 Partial Content
+</span><span>Date: Wed, 15 Nov 1995 06:25:24 GMT
+</span><span>Last-Modified: Wed, 15 Nov 1995 04:58:08 GMT
+</span><span>Content-Range: bytes 21010-47021/47022
+</span><span>Content-Length: 26012
+</span><span>Content-Type: image/gif
+</span><span>
+</span><span>... 26012 bytes of partial image data ...
+</span></code></pre>
+<p>If multiple parts are being transferred, the server generating the 206 response MUST generate a &quot;multipart/byteranges&quot; payload<sup><a href="https://httpcod.es/206/#ref-2">2</a></sup>, and a Content-Type header field containing the multipart/byteranges media type and its required boundary parameter. To avoid confusion with single-part responses, a server MUST NOT generate a Content-Range header field in the HTTP header section of a multiple part response (this field will be sent in each part instead).</p>
+<p>Within the header area of each body part in the multipart payload, the server MUST generate a Content-Range header field corresponding to the range being enclosed in that body part. If the selected representation would have had a Content-Type header field in a <a href="/200">200 OK</a> response, the server SHOULD generate that same Content-Type field in the header area of each body part. For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 206 Partial Content
+</span><span>Date: Wed, 15 Nov 1995 06:25:24 GMT
+</span><span>Last-Modified: Wed, 15 Nov 1995 04:58:08 GMT
+</span><span>Content-Length: 1741
+</span><span>Content-Type: multipart/byteranges; boundary=THIS_STRING_SEPARATES
+</span><span>
+</span><span>--THIS_STRING_SEPARATES
+</span><span>Content-Type: application/pdf
+</span><span>Content-Range: bytes 500-999/8000
+</span><span>
+</span><span>...the first range...
+</span><span>--THIS_STRING_SEPARATES
+</span><span>Content-Type: application/pdf
+</span><span>Content-Range: bytes 7000-7999/8000
+</span><span>
+</span><span>...the second range
+</span><span>--THIS_STRING_SEPARATES--
+</span></code></pre>
+<p>When multiple ranges are requested, a server MAY coalesce any of the ranges that overlap, or that are separated by a gap that is smaller than the overhead of sending multiple parts, regardless of the order in which the corresponding byte-range-spec appeared in the received Range header field. Since the typical overhead between parts of a multipart/byteranges payload is around 80 bytes, depending on the selected representation's media type and the chosen boundary parameter length, it can be less efficient to transfer many small disjoint parts than it is to transfer the entire selected representation.</p>
+<p>A server MUST NOT generate a multipart response to a request for a single range, since a client that does not request multiple parts might not support multipart responses. However, a server MAY generate a multipart/byteranges payload with only a single body part if multiple ranges were requested and only one range was found to be satisfiable or only one range remained after coalescing. A client that cannot process a multipart/byteranges response MUST NOT generate a request that asks for multiple ranges.</p>
+<p>When a multipart response payload is generated, the server SHOULD send the parts in the same order that the corresponding byte-range-spec appeared in the received Range header field, excluding those ranges that were deemed unsatisfiable or that were coalesced into other ranges. A client that receives a multipart response MUST inspect the Content-Range header field present in each body part in order to determine which range is contained in that body part; a client cannot rely on receiving the same ranges that it requested, nor the same order that it requested.</p>
+<p>When a 206 response is generated, the server MUST generate the following header fields, in addition to those required above, if the field would have been sent in a <a href="/200">200 OK</a> response to the same request: Date, Cache-Control, ETag, Expires, Content-Location, and Vary.</p>
+<p>If a 206 is generated in response to a request with an If-Range header field, the sender SHOULD NOT generate other representation header fields beyond those required above, because the client is understood to already have a prior response containing those header fields. Otherwise, the sender MUST generate all of the representation header fields that would have been sent in a <a href="/200">200 OK</a> response to the same request.</p>
+<p>A 206 response is cacheable by default; i.e., unless otherwise indicated by explicit cache controls<sup><a href="https://httpcod.es/206/#ref-3">3</a></sup>.</p>
+<hr />
+<ul>
+<li><span id="ref-1"><sup>1</sup> Range <a href="http://tools.ietf.org/html/rfc7233#section-3.1">RFC7233 Section 3.1</a></span></li>
+<li><span id="ref-2"><sup>2</sup> Internet Media Type multipart/byteranges
+<a href="http://tools.ietf.org/html/rfc7233#appendix-A">RFC7233 Appendix A</a></span></li>
+<li><span id="ref-3"><sup>3</sup> Calculating Heuristic Freshness
+<a href="http://tools.ietf.org/html/rfc7234#section-4.2.2">RFC7234 Section 4.2.2</a></span></li>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7233#section-4.1">RFC7233 Section 4.1</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>206</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:partial_content</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::PARTIAL_CONTENT</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusPartialContent</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_PARTIAL_CONTENT</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.PARTIAL_CONTENT</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.PARTIAL_CONTENT</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.PARTIAL_CONTENT</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.PartialContent</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

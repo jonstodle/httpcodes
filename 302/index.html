@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>302 Found &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 302">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>3&times;&times; Redirection</h2>
+  <h1>
+    <span>302</span> Found
+  </h1>
+  <p>The target resource resides temporarily under a different URI. Since the redirection might be altered on occasion, the client ought to continue to use the effective request URI for future requests.</p>
+<p>The server SHOULD generate a Location header field in the response containing a URI reference for the different URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the different URI(s).</p>
+<p>Note: For historical reasons, a user agent MAY change the request method from POST to GET for the subsequent request. If this behavior is undesired, the <a href="/307">307 Temporary Redirect</a> status code can be used instead.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc7231#section-6.4.3">RFC7231 Section 6.4.3</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>302</span> Code References
+  </h1>
+  
+  <p>
+    Rails HTTP Status Symbol <code>:found</code>
+  </p>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::FOUND</code>
+  </p>
+  
+  <p>
+    Go HTTP Status Constant <code>http.StatusFound</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_FOUND</code>
+  </p>
+  
+  <p>
+    Python2 HTTP Status Constant <code>httplib.FOUND</code>
+  </p>
+  
+  <p>
+    Python3+ HTTP Status Constant <code>http.client.FOUND</code>
+  </p>
+  
+  <p>
+    Python3.5+ HTTP Status Constant <code>http.HTTPStatus.FOUND</code>
+  </p>
+  
+  <p>
+    .NET HTTP Status Constant <code>System.Net.HttpStatusCode.Found</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>

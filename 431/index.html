@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>431 Request Header Fields Too Large &mdash; httpcod.es</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  
+<meta name="description" content="HTTP Status Code 431">
+
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>
+          <a href="/">&larr; Return to httpcod.es</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<article class="code container">
+  <h2>4&times;&times; Client Error</h2>
+  <h1>
+    <span>431</span> Request Header Fields Too Large
+  </h1>
+  <p>The server is unwilling to process the request because its header fields are too large. The request MAY be resubmitted after reducing the size of the request header fields.</p>
+<p>It can be used both when the set of request header fields in total is too large, and when a single header field is at fault.  In the latter case, the response representation SHOULD specify which header field was too large.</p>
+<p>For example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>HTTP/1.1 431 Request Header Fields Too Large
+</span><span>Content-Type: text/html
+</span><span>
+</span><span>&lt;html&gt;
+</span><span>  &lt;head&gt;
+</span><span>    &lt;title&gt;Request Header Fields Too Large&lt;/title&gt;
+</span><span>  &lt;/head&gt;
+</span><span>  &lt;body&gt;
+</span><span>    &lt;h1&gt;Request Header Fields Too Large&lt;/h1&gt;
+</span><span>    &lt;p&gt;The &quot;Example&quot; header was too large.&lt;/p&gt;
+</span><span>  &lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<p>Responses with the 431 status code MUST NOT be stored by a cache.</p>
+<hr />
+<ul>
+<li>Source: <a href="http://tools.ietf.org/html/rfc6585#section-5">RFC6585 Section 5</a></li>
+</ul>
+
+  
+  <h1 class="section">
+    <span>431</span> Code References
+  </h1>
+  
+  <p>
+    Rust HTTP Status Constant <code>http::StatusCode::REQUEST_HEADER_FIELDS_TOO_LARGE</code>
+  </p>
+  
+  <p>
+    Symfony HTTP Status Constant <code>Response::HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE</code>
+  </p>
+  
+  
+  <a href="/">&larr; Return to httpcod.es</a>
+</article>
+
+</body>
+</html>
